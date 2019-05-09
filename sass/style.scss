@@ -1,8 +1,11 @@
-* {
-    box-sizing: border-box;
-}
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "layout";
+@import "components/buttons";
+
 body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: $main-bg;
+    font-family: $roboto-font;
+    color: $main-font-color;
 }

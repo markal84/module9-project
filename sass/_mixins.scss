@@ -1,0 +1,6 @@
+/* for simple transition effect animation */
+@mixin transition($time) {
+    -webkit-transition: $time ease-in-out;
+    -ms-transform: $time ease-in-out;
+    transform: $time ease-in-out;
+} 
