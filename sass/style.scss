@@ -2,10 +2,31 @@
 @import "mixins";
 @import "normalize";
 @import "layout";
+@import "sections/menus";
 @import "components/buttons";
 
 body {
     background-color: $main-bg;
     font-family: $roboto-font;
+    font-weight: $normal;
     color: $main-font-color;
 }
+
+/* font styles */
+
+    //colors
+    .blue-paragraph {
+        color: $blue;
+    }
+
+    //weight
+    .bold {
+        font-weight: $bold;
+    }
+
+
+/* text transformations */
+
+.uppercase {
+    text-transform: $uppercase;
+}  
