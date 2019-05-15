@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+}
+
+td {
+    border-bottom: 2px solid $light-grey;
+    padding: 10px 0;
+}
+
+.rounded-border {
+    border: 1px solid $light-grey;
+    border-radius: 3px;
+    border-collapse: collapse;
+}
+
+.hovered {
+    @include transition(0.2s);
+    background-color: inherit;
+    &:hover {
+        background-color: #eeeeee;
+    }
+} 
+/*tbody tr:hover {
+    background: #eee;
+} */

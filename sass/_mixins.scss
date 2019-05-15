@@ -14,3 +14,8 @@
 @mixin font-size($size) {
     font-size: $size;
 }    
+
+@mixin margin-tb($margin) {
+    margin-top: $margin * 1px;
+    margin-bottom: $margin * 1px;
+}
