@@ -1017,6 +1017,7 @@ template {
 
 table {
   width: 100%;
+  border-collapse: collapse;
 }
 
 td {
@@ -1120,8 +1121,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   color: #333;
-  margin-left: 200px;
-  margin-top: 62px;
 }
 
 img {
@@ -1135,12 +1134,11 @@ a {
 
 /* main containers fixed sizes */
 .container-top, .container {
-  width: 1200px;
-  margin: 100px auto 50px auto;
+  margin: 100px 50px 50px 250px;
 }
 
 .container {
-  margin: 50px auto;
+  margin: 50px 50px 50px 250px;
 }
 
 /* font styles */

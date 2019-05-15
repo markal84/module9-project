@@ -14,8 +14,8 @@ body {
     font-family: $roboto-font;
     font-weight: $normal;
     color: $main-font-color;
-    margin-left: 200px;
-    margin-top: 62px;
+    //margin-left: 200px;
+    //margin-top: 62px;
 }
 
 img {
@@ -27,12 +27,11 @@ a {
 }  
 /* main containers fixed sizes */
 .container-top {
-    width: 1200px;
-    margin: 100px auto 50px auto;
+    margin: 100px 50px 50px 250px;
 }
 .container {
     @extend .container-top;
-    margin: 50px auto;
+    margin: 50px 50px 50px 250px;
 }
 
 /* font styles */
