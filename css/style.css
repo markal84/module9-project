@@ -902,13 +902,13 @@ template {
   padding-left: 17px;
 }
 
-.sidebar .hamburger {
+.sidebar #hamburger {
   line-height: 30px;
   padding-left: 150px;
   visibility: hidden;
 }
 
-.sidebar .hamburger:hover {
+.sidebar #hamburger:hover {
   cursor: pointer;
 }
 
@@ -1140,31 +1140,58 @@ tr:hover .layer {
 
 @media screen and (max-width: 767px) {
   .sidebar {
-    height: 100vh;
+    height: 70vh;
     z-index: 1;
     left: -160px;
+    transform: translateX(0);
+    transition: transform .5s;
   }
-  .sidebar .hamburger {
+  .sidebar #hamburger {
     visibility: visible;
     margin-left: 20px;
+  }
+  .sidebar ul li a {
+    padding: 11px;
+  }
+  .sidebar .manager h4 {
+    margin: 10px 0;
+  }
+  .sidebar .manager p {
+    margin: 10px 0;
+  }
+  .show {
+    transform: translateX(160px) !important;
+  }
+  /*.show-topbar { //class to show topbar on mobile
+        transform: translateX(160px) !important;
+    }*/
+  .dim-bg {
+    background-color: rgba(0, 0, 0, 0.4);
   }
   .grey-thin, .lightgrey-thin {
     margin: 0 !important;
   }
   .topbar {
     width: 200px;
+    height: 100vh;
     position: fixed;
-    top: 590px;
-    left: -200px;
+    top: 500px;
+    left: -160px;
     background-color: #191919;
     border-bottom: none;
     z-index: 2;
+    transform: translateX(0);
+    transition: transform .5s;
   }
   .topbar ul li {
     border-left: none;
+    line-height: 42px;
   }
   .topbar ul li:nth-child(1) {
     font-size: 16px;
+  }
+  .topbar ul li svg {
+    margin: 0 5px 0 20px !important;
   }
   .container-top {
     margin: 0 0 0 40px !important;
@@ -1193,6 +1220,7 @@ tr:hover .layer {
 
 body {
   background-color: #f5f5f2;
+  transition: .5s;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   color: #333;

@@ -1,32 +1,63 @@
 @media screen and (max-width: 767px) {
     .sidebar {
         //height: 550px;
-        height: 100vh;
+        height: 70vh;
         z-index: 1;
         left: -160px;
-        .hamburger {
+        transform: translateX(0);
+        transition: transform .5s;
+        #hamburger {
             visibility: visible;
             margin-left: 20px;
         }
+        ul {
+            li {
+                a {
+                    padding: 11px;
+                }
+            }
+        }
+        .manager h4 {
+            margin: 10px 0;
+        }
+        .manager p {
+            margin: 10px 0;
+        }
     }
+    .show { // class to show hide sidebar on mobile
+        transform: translateX(160px) !important;
+    }
+    /*.show-topbar { //class to show topbar on mobile
+        transform: translateX(160px) !important;
+    }*/
+    .dim-bg { // class to toogle bg dimming on clicking hamburger 
+        background-color: rgba(0,0,0,0.4);      
+    } 
     .grey-thin {
         margin: 0 !important;
     }
     .topbar {
         //height: 400px; //temporary
         width: 200px;
+        height: 100vh;
         position: fixed;
-        top: 590px;
-        left: -200px;
+        top: 500px;
+        left: -160px;
         background-color: $sidebar-bg;
         border-bottom: none;
         z-index: 2;
+        transform: translateX(0);
+        transition: transform .5s;
         ul {
             li {
                 //display: block;
                 border-left: none;
+                line-height: 42px;
                 &:nth-child(1) {
                     @include font-size(16px);
+                }
+                svg {
+                    margin: 0 5px 0 20px !important;
                 }
             }
         }
