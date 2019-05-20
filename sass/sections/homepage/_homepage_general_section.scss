@@ -4,13 +4,23 @@
     .refresh-button {
         position: relative;
         //top: 6px;
-        margin-left: 20px;
+        left: 20px;
+        svg {
+            padding: 0 4px;
+            fill: white;
+        }
     }
     .padding-b-40 {
         padding-bottom: 40px;
     }
     .for-mainpage {
-        padding: 10px 25px;
+        text-align: center;
+        padding: 10px;
+        border-bottom: none;
+        img {
+            position: relative;
+            left: 10%;
+        }
     }
 
 }

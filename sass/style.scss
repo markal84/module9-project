@@ -8,6 +8,7 @@
 @import "components/buttons";
 @import "sections/homepage/homepage_general_section";
 @import "sections/homepage/homepage_links";
+@import "media_queries";
 
 body {
     background-color: $main-bg;
@@ -30,7 +31,6 @@ a {
     margin: 100px 50px 50px 250px;
 }
 .container {
-    @extend .container-top;
     margin: 50px 50px 50px 250px;
 }
 
@@ -45,6 +45,9 @@ a {
     }
     .grey-color {
         color: $grey-font-color;
+    }
+    .topbar-color {
+        color: $topbar-color;
     }
 
     //weight
@@ -102,11 +105,24 @@ a {
     padding: 10px 20px;
 }
 
+/* wrapper for scroll */
+.scroll-wrapper {
+    display: block;
+    width: auto;
+    overflow-x: auto;
+    img {
+        max-width: none;
+    }
+}
+
 
 /* main page */
 
     /* general section */
     .white-bg {
         background-color: $section-bg;
+    }
+    .padding {
+        padding: 5px;
     }
     

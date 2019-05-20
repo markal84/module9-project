@@ -1,6 +1,6 @@
 /* grid variables */
 
-$grid__bp-sm: 576;
+//$grid__bp-sm: 767; //576 - previous value
 $grid__bp-md: 768;
 $grid__bp-lg: 992;
 $grid__bp-xl: 1200;
@@ -8,7 +8,7 @@ $grid__cols: 12;
 
 $map-grid-props: (
         '': 0,
-        '-sm': $grid__bp-sm,
+//        '-sm': $grid__bp-sm,
         '-md': $grid__bp-md,
         '-lg': $grid__bp-lg,
         '-xl': $grid__bp-xl
@@ -24,7 +24,7 @@ $map-grid-props: (
   }
 }
 
-@mixin create-col-classes($modifier, $grid-cols, $breakpoint) { // col classes creator
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) { // col min classes creator
   @include create-mq($breakpoint, 'min') {
     &__col#{$modifier}-offset-0 {
       margin-left: 0;
@@ -70,5 +70,18 @@ $map-grid-props: (
   }
   @each $modifier , $breakpoint in $map-grid-props {
     @include create-col-classes($modifier, $grid__cols, $breakpoint);
+  }
+  @include create-mq(767, 'max') { // create max width columns
+    &__col#{'-sm'}-offset-0 {
+      margin-left: 0;
+    }
+    @for $i from 1 through 12 {
+      &__col#{'-sm'}-#{$i} {
+        flex-basis: (100 / (12 / $i) ) * 1%;
+      }
+      &__col#{'-sm'}-offset-#{$i} {
+        margin-left: (100 / (12 / $i) ) * 1%;
+      }
+    }
   }
 }

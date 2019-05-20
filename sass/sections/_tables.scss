@@ -24,3 +24,9 @@ td {
 /*tbody tr:hover {
     background: #eee;
 } */
+.scroll-wrapper-table { // scroll for tables
+    overflow-x: auto;
+}
+.width-450 { //fixed width for table for mobiles
+    width: 100%;
+}
