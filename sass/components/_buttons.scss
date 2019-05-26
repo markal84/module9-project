@@ -18,3 +18,16 @@
         background-color: $light-orange;
     }
 }
+.refresh-button {
+    position: relative;
+    //top: 6px;
+    left: 20px;
+    svg {
+        padding: 0 4px;
+        fill: white;
+    }
+}
+
+.btn-submit {
+    margin-bottom: 30px;
+}

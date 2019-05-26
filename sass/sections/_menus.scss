@@ -1,3 +1,9 @@
+.active {
+    background-color: #282828;
+    border-left: 5px solid $orange !important;
+    color: white !important;
+    fill: white !important;
+}
 .sidebar {
     background-color: $sidebar-bg;
     padding: 20px 0;
@@ -37,22 +43,19 @@
                 padding: 15px;
                 display: block;
                 color: #999999;
+                fill: #999999;
                 &:hover {
                     color: white;
+                    fill: white;
                 }
                 &:active {
                     color: white;
+                    fill: white;
                 }
                 /*.sidebar-link-img*/ svg {
                     width: 15px;
                     margin-right: 15px;
-                    fill: #999999;
-                    &:hover {
-                        fill: white;
-                    }
-                    &:active {
-                        fill: white;
-                    }
+                    //fill: #999999;
                 }
             }
         }
@@ -114,4 +117,33 @@
         }
     }
 
+}
+
+.breadcrumb {
+    flex-wrap: wrap;
+    padding: 0;
+    display: inline-flex;
+    li {
+        &:first-child {
+            margin-right: 10px;
+        }
+        &:last-child {
+            margin-left: 10px;
+        }
+        svg {
+            height: 18px;
+            fill: #a4a4a4;
+        }
+        a {
+            padding: 15px;
+            color: $blue;
+            &:hover {
+                color: $orange;
+            }
+            &:active {
+                background-color: $grey;
+                color: $dark-grey;
+            }
+        }
+    }
 }

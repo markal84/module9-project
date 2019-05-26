@@ -2,18 +2,58 @@ table {
     width: 100%;
     border-collapse: collapse;
 }
-
+tr > th {
+    color: $grey-font-color;
+    padding: 15px 0;
+    cursor: pointer;
+}
 td {
     border-bottom: 2px solid $light-grey;
-    padding: 10px 0;
+    padding: 15px 0;
 }
-
+.top-border { // for top border on rows/cells
+    border-top: 2px solid $light-grey;
+}
 .rounded-border {
     border: 1px solid $light-grey;
     border-radius: 3px;
     border-collapse: collapse;
+    transition: .5s;
+    &:hover {
+        border: 1px solid $sidebar-bg;
+    }
 }
-
+.layer { // layer for showing / hiding icons on hover on certain tables
+    width: 100%;
+    opacity: 0; 
+}
+.layer-desktop { // show icons on links table on desktop
+    @extend .layer;
+}
+tr:hover .layer-desktop { // showing icons on tables on hover - desktop screen
+    opacity: 1;
+}
+th:hover .layer { // showing arrows on certain tables
+    width: 100%;
+    opacity: 1;
+    color: $main-font-color; 
+}
+th {
+    svg {
+        fill: #9c9c9c;
+        width: 20px;
+        margin: 0 10px;
+        position: relative;
+        top: 2px;
+        &:active {
+            transform: rotate(180deg);
+        }
+    }
+    .arrow {
+        width: 12px;
+        top: 0;
+    } 
+}
 .hovered {
     @include transition(0.2s);
     background-color: inherit;
@@ -21,12 +61,19 @@ td {
         background-color: #eeeeee;
     }
 } 
-/*tbody tr:hover {
-    background: #eee;
-} */
 .scroll-wrapper-table { // scroll for tables
     overflow-x: auto;
 }
-.width-450 { //fixed width for table for mobiles
+.width-450 { //fixed width for table on mobiles - used fo media queries
     width: 100%;
+}
+
+//payout page and detail page table table
+.p-payout-table {
+    line-height: 25px;
+    margin: 0;
+}
+.th-container {
+    width: 150px;
+    //height: 25px;
 }

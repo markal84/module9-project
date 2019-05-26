@@ -9,6 +9,7 @@
 @import "sections/homepage/homepage_general_section";
 @import "sections/homepage/homepage_links";
 @import "media_queries";
+@import "sections/form";
 
 body {
     background-color: $main-bg;
@@ -26,6 +27,12 @@ img {
   }
 a {
     text-decoration: none;
+}
+svg {
+    cursor: pointer;
+}
+ul {
+    list-style: none;
 }  
 /* main containers fixed sizes */
 .container-top {

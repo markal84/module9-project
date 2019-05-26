@@ -1,0 +1,34 @@
+.field {
+    margin: 10px 0;
+    label {
+        line-height: 38px;
+        color: $grey-font-color;
+        font-weight: bold;
+        //float: left;
+    }
+    input {
+        float: right;
+        padding: 8px 15px;
+        width: 70%;
+        transition: 0s;
+        &:hover {
+            border: 1px solid $light-grey;
+        }
+        &:focus {
+            outline: 1px solid $orange;
+        }
+    }
+}
+.terms-field {
+    margin-top: 40px;
+    .terms-label {
+        line-height: 0;
+        color: $main-font-color;
+        font-weight: $normal;
+    }
+    .terms-input {
+        //float: none;
+        margin-right: 10px;
+        width: auto;
+    } 
+}
