@@ -10,31 +10,79 @@
 
     <body>
         <div class="wrapper--fluid">
+                <div class="overlay" id="overlay">
+                        <div class="wrapper modal modal-login" id="modalLogin">
+                            <h4 class="main-heading uppercase">Login</h4>
+                            <div class="wrapper__row">                 
+                                <div class="wrapper__col-md-10 wrapper__col-sm-12">
+                                    <form class="form-login" method="POST">
+                                        <div class="field-modal-login">
+                                            <input type="text" class="rounded-border float-left mobile-no-float" name="login" requied placeholder="login name"><svg xmlns="http://www.w3.org/2000/svg" class="icons-for-links" viewBox="0 0 15 16"><path d="M7.5 9c2.2 0 4-1.8 4-4 0-2.2-1.8-4-4-4s-4 1.8-4 4C3.5 7.2 5.3 9 7.5 9zM7.5 2c1.7 0 3 1.3 3 3s-1.3 3-3 3 -3-1.3-3-3S5.8 2 7.5 2zM7.5 10c-3 0-5.6 2-6.3 4.9l1 0.3C2.8 12.7 5 11 7.5 11c2.5 0 4.7 1.7 5.3 4.1l1-0.3C13.1 12 10.5 10 7.5 10z"/></svg>
+                                        </div>
+                                        <div class="field-modal-login">
+                                            <input type="password" class="rounded-border float-right mobile-no-float" name="password" required placeholder="password"><svg xmlns="http://www.w3.org/2000/svg" class="icons-for-links login-icon" viewBox="0 0 22 14"><path d="M21.1 7.4l-2.6-2.6 -2 2L14.7 5h-2.1c-1-2.8-3.8-4.4-6.8-3.9C3.5 1.5 1.6 3.4 1.1 5.7c-0.4 1.8 0.1 3.7 1.2 5.1C3.5 12.2 5.2 13 7 13c2.2 0 4.1-1.1 5.2-3h7.9c0.6 0 1.1-0.4 1.4-0.9C21.7 8.5 21.6 7.9 21.1 7.4zM20.5 8.7c0 0.1-0.2 0.3-0.5 0.3h-8.5l-0.1 0.3C10.6 11 8.9 12 7 12c-1.5 0-2.9-0.7-3.9-1.8 -1-1.2-1.3-2.7-1-4.2C2.5 4 4.1 2.5 6 2.1 6.4 2 6.7 2 7 2c2.2 0 4.2 1.4 4.8 3.6L11.9 6h2.4l2.2 2.2 2-2 1.9 1.9C20.7 8.4 20.6 8.6 20.5 8.7zM5.5 4.5C4.1 4.5 3 5.6 3 7s1.1 2.5 2.5 2.5S8 8.4 8 7 6.9 4.5 5.5 4.5zM5.5 8.5C4.7 8.5 4 7.8 4 7s0.7-1.5 1.5-1.5S7 6.2 7 7 6.3 8.5 5.5 8.5z"/></svg>
+                                        </div>     
+                                    </form>
+                                </div>
+                                <div class="wrapper__col-sm-offset-4"></div>
+                                <div class="wrapper__col-md-2 wrapper__col-sm-3">
+                                    <button type="submit" class="btn btn-default btn-submit btn-login-modal">Enter</button>
+                                </div>
+                                <div class="wrapper__col-sm-offset-3"></div>
+                            </div>
+                        </div>
+                        <div class="wrapper modal popup-quit" id="modalQuit">
+                            <p class="main-heading bold">Do you really want to Logout?</p>
+                            <div class="wrapper__row">
+                                <div class="wrapper__col-offset-3"></div>
+                                <div class="wrapper__col-4">
+                                    <button class="btn btn-default btn-grey js--close-modal">Cancel</button>
+                                </div>
+                                <div class="wrapper__col-offset-1"></div>
+                                <div class="wrapper__col-4">
+                                    <button class="btn btn-default btn-grey js--close-modal">Logout</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper modal popup-message" id="modalChat">
+                            <h4 class="main-heading bold uppercase">online chat with your personal manager<svg xmlns="http://www.w3.org/2000/svg" class="icons-for-links float-right js--close-modal" viewBox="0 0 13 13"><polygon points="12.4 1.4 11.6 0.6 6.5 5.8 1.4 0.6 0.6 1.4 5.8 6.5 0.6 11.6 1.4 12.4 6.5 7.2 11.6 12.4 12.4 11.6 7.2 6.5 "/></svg></h4>
+                            <img src="images/manager-img.png" class="float-left"><h3>Michael E.</h3><button class="btn btn-status">online</button>
+                            <hr class="lightgrey-thin">
+                                <p class="chat-message manager-message">Hello. Can I help you?</p>
+                                <p class="chat-message client-message">Hello! I would like to know about Postback</p>
+                                <p class="chat-message manager-message">Ok. Give me 5min...</p>
+                            <hr class="lightgrey-thin">
+                            <div class="field-modal-login">
+                                <input type="text" class="rounded-border" name="message" placeholder="Enter the message.."><svg xmlns="http://www.w3.org/2000/svg" class="icons-for-links chat-icon" viewBox="0 0 16 17"><path d="M16 15.7L13.3 13H7.5C3.9 13 1 10.1 1 6.5S3.9 0 7.5 0h2C13.1 0 16 2.9 16 6.5V15.7zM7.5 1C4.5 1 2 3.5 2 6.5c0 3 2.5 5.5 5.5 5.5h6.2l1.3 1.3V6.5c0-3-2.5-5.5-5.5-5.5H7.5z"/></svg><button class="btn btn-default btn-rounded btn-chat hide-show"><svg xmlns="http://www.w3.org/2000/svg" class=" icons-for-links arrow" viewBox="0 0 7 5"><polygon points="3.5 4.2 0.1 0.9 0.9 0.1 3.5 2.8 6.1 0.1 6.9 0.9 "/></svg></button>
+                                <button type="submit" class="btn btn-default btn-submit show-hide">Send</button>
+                            </div>
+                        </div>
+            </div> <!--overlay class ends here-->
             <nav class="topbar">
                 <ul>
-                    <li class="bold topbar-color"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 18"><path d="M17 9h-2V7.5C15 6.1 13.9 5 12.5 5H4.9L12 2.2V4h1V0.8L2.1 5C0.9 5.2 0 6.3 0 7.5v8C0 16.9 1.1 18 2.5 18h10c1.4 0 2.5-1.1 2.5-2.5V14h2V9zM14 15.5c0 0.8-0.7 1.5-1.5 1.5h-10C1.7 17 1 16.3 1 15.5v-8C1 6.7 1.7 6 2.5 6h10C13.3 6 14 6.7 14 7.5V9H8.5C7.1 9 6 10.1 6 11.5S7.1 14 8.5 14H14V15.5zM16 13H8.5C7.7 13 7 12.3 7 11.5S7.7 10 8.5 10H16V13z"/></svg>$1,500.00<svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 7 5"><polygon points="3.5 4.2 0.1 0.9 0.9 0.1 3.5 2.8 6.1 0.1 6.9 0.9 "/></svg></li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19"><path d="M17 16l-2.4-3.7V6.5c0-3-2.5-5.5-5.5-5.5S3.6 3.5 3.6 6.5v5.8L1.1 16h5.5c0.2 1.1 1.2 2 2.4 2s2.2-0.9 2.4-2H17zM4.6 6.5C4.6 4 6.6 2 9.1 2s4.5 2 4.5 4.5V12h-9V6.5zM4.3 13h9.5l1.3 2H3L4.3 13zM9.1 17c-0.7 0-1.2-0.4-1.4-1h2.8C10.3 16.6 9.7 17 9.1 17z"/></svg></li>
-                    <li class="blue-paragraph"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19"><path d="M9.5 4C7.6 4 6 5.6 6 7.5S7.6 11 9.5 11 13 9.4 13 7.5 11.4 4 9.5 4zM9.5 10C8.1 10 7 8.9 7 7.5S8.1 5 9.5 5 12 6.1 12 7.5 10.9 10 9.5 10zM9.5 1C4.8 1 1 4.8 1 9.5S4.8 18 9.5 18 18 14.2 18 9.5 14.2 1 9.5 1zM14 15.5c0-1.8-0.1-3.5-1.3-4.8l-0.7 0.7c1.1 1.1 1.1 2.7 1.1 4.5l0 0.3c-1 0.6-2.2 0.9-3.5 0.9S7 16.7 6 16.1l0-0.3c0-1.8 0-3.4 1.1-4.5l-0.7-0.7C5.1 12 5 13.7 5 15.5c-1.8-1.4-3-3.5-3-6C2 5.4 5.4 2 9.5 2S17 5.4 17 9.5C17 11.9 15.8 14.1 14 15.5z"/></svg>Customer Profile</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 15"><path d="M13.9 3.1l-0.7 0.7L16.3 7H3v1h13.3l-3.1 3.1 0.7 0.7 4.4-4.4L13.9 3.1zM10 14H1V1h9v3h1V0H0v15h11v-4h-1V14z"/></svg></li>
+                    <li class="bold topbar-color" data-tooltip title="Available funds"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 18"><path d="M17 9h-2V7.5C15 6.1 13.9 5 12.5 5H4.9L12 2.2V4h1V0.8L2.1 5C0.9 5.2 0 6.3 0 7.5v8C0 16.9 1.1 18 2.5 18h10c1.4 0 2.5-1.1 2.5-2.5V14h2V9zM14 15.5c0 0.8-0.7 1.5-1.5 1.5h-10C1.7 17 1 16.3 1 15.5v-8C1 6.7 1.7 6 2.5 6h10C13.3 6 14 6.7 14 7.5V9H8.5C7.1 9 6 10.1 6 11.5S7.1 14 8.5 14H14V15.5zM16 13H8.5C7.7 13 7 12.3 7 11.5S7.7 10 8.5 10H16V13z"/></svg>$1,500.00<svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 7 5"><polygon points="3.5 4.2 0.1 0.9 0.9 0.1 3.5 2.8 6.1 0.1 6.9 0.9 "/></svg></li>
+                    <li class="blue-paragraph" id="notification" data-tooltip title="Notifications"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19"><path d="M17 16l-2.4-3.7V6.5c0-3-2.5-5.5-5.5-5.5S3.6 3.5 3.6 6.5v5.8L1.1 16h5.5c0.2 1.1 1.2 2 2.4 2s2.2-0.9 2.4-2H17zM4.6 6.5C4.6 4 6.6 2 9.1 2s4.5 2 4.5 4.5V12h-9V6.5zM4.3 13h9.5l1.3 2H3L4.3 13zM9.1 17c-0.7 0-1.2-0.4-1.4-1h2.8C10.3 16.6 9.7 17 9.1 17z"/></svg><span class="only-on-mobile">Notifications</span></li>
+                    <li class="blue-paragraph" id="login" data-tooltip title="User Profile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19"><path d="M9.5 4C7.6 4 6 5.6 6 7.5S7.6 11 9.5 11 13 9.4 13 7.5 11.4 4 9.5 4zM9.5 10C8.1 10 7 8.9 7 7.5S8.1 5 9.5 5 12 6.1 12 7.5 10.9 10 9.5 10zM9.5 1C4.8 1 1 4.8 1 9.5S4.8 18 9.5 18 18 14.2 18 9.5 14.2 1 9.5 1zM14 15.5c0-1.8-0.1-3.5-1.3-4.8l-0.7 0.7c1.1 1.1 1.1 2.7 1.1 4.5l0 0.3c-1 0.6-2.2 0.9-3.5 0.9S7 16.7 6 16.1l0-0.3c0-1.8 0-3.4 1.1-4.5l-0.7-0.7C5.1 12 5 13.7 5 15.5c-1.8-1.4-3-3.5-3-6C2 5.4 5.4 2 9.5 2S17 5.4 17 9.5C17 11.9 15.8 14.1 14 15.5z"/></svg><span class="only-on-mobile">User Profile</span></li>
+                    <li class="blue-paragraph" id="logout" data-tooltip title="Logout"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 15"><path d="M13.9 3.1l-0.7 0.7L16.3 7H3v1h13.3l-3.1 3.1 0.7 0.7 4.4-4.4L13.9 3.1zM10 14H1V1h9v3h1V0H0v15h11v-4h-1V14z"/></svg><span class="only-on-mobile">Logout</span></li>
                 </ul>
             </nav>
             <nav class="sidebar">
-                <div class="logo"><img src="images/logo.png"></div>
-                <div id="hamburger"><img src="images/hamburger.png"></div> 
-                <ul>
-                    <li><a href="index.html" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16"><path d="M8.5 3.6l0.9 2.7L9.6 7h0.7 2.8l-2.3 1.6 -0.6 0.4 0.2 0.7 0.9 2.7 -2.3-1.6 -0.6-0.4 -0.6 0.4 -2.3 1.6 0.9-2.7 0.2-0.7L6.1 8.6 3.9 7h2.8 0.7l0.2-0.7L8.5 3.6M8.5 0.4L6.7 6H0.8l4.8 3.5L3.7 15l4.8-3.5 4.8 3.5 -1.8-5.6L16.2 6h-5.9L8.5 0.4 8.5 0.4z"/></svg>General</a></li>
-                    <li><a href="details.html" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13"><path d="M0 13h14v-1H0V13zM0 10h14V6H0V10zM9 7h4v2H9V7zM1 7h7v2H1V7zM0 0v4h14V0H0zM5 3H1V1h4V3zM13 3H6V1h7V3z"/></svg>Details</a></li>
-                    <li><a href="links.html" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 10"><path d="M7 8H5C3.3 8 2 6.7 2 5s1.3-3 3-3h1V1H5C2.8 1 1 2.8 1 5s1.8 4 4 4h2c2.2 0 4-1.8 4-4h-1C10 6.7 8.7 8 7 8zM13 1h-2C8.8 1 7 2.8 7 5h1c0-1.7 1.3-3 3-3h2c1.7 0 3 1.3 3 3s-1.3 3-3 3h-1v1h1c2.2 0 4-1.8 4-4S15.2 1 13 1z"/></svg>Links</a></li>
-                    <li><a href="banners.html" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13"><path d="M0 6h6V0H0V6zM1 1h4v4H1V1zM8 0v8h6V0H8zM13 7H9V1h4V7zM0 13h6V8H0V13zM1 9h4v3H1V9zM8 13h6v-3H8V13zM9 11h4v1H9V11z"/></svg>Banners</a></li>
-                    <li><a href="personaldata.html" target="_blank" class="active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14"><path d="M4.5 8C6.4 8 8 6.4 8 4.5S6.4 1 4.5 1 1 2.6 1 4.5 2.6 8 4.5 8zM4.5 2C5.9 2 7 3.1 7 4.5S5.9 7 4.5 7 2 5.9 2 4.5 3.1 2 4.5 2zM7.7 7.7L6.9 8.3C8 9.5 8 11.1 8 12.9V13H1v-0.1C1 11.1 1 9.5 2 8.3L1.3 7.7C0 9.1 0 10.9 0 12.9L0 14h9l0-1.1C9 10.9 9 9.1 7.7 7.7z"/></svg>Personal data</a></li>
-                    <li><a href="payout.html" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13"><path d="M10.5 0h-8C1.1 0 0 1.1 0 2.5v8C0 11.9 1.1 13 2.5 13h8c1.4 0 2.5-1.1 2.5-2.5v-8C13 1.1 11.9 0 10.5 0zM1 10.5v-8C1 1.7 1.7 1 2.5 1H6v2H5C3.9 3 3 3.9 3 5s0.9 2 2 2h1v2H4v1h2v2H2.5C1.7 12 1 11.3 1 10.5zM6 4v2H5C4.4 6 4 5.6 4 5s0.4-1 1-1H6zM7 7h1c0.6 0 1 0.4 1 1 0 0.6-0.4 1-1 1H7V7zM12 10.5c0 0.8-0.7 1.5-1.5 1.5H7v-2h1c1.1 0 2-0.9 2-2 0-1.1-0.9-2-2-2H7V4h2V3H7V1h3.5C11.3 1 12 1.7 12 2.5V10.5z"/></svg>Payout</a></li>
-                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 15"><path d="M7.5 4H2.7l2.1-2.1L4.1 1.1 0.8 4.5l3.4 3.4 0.7-0.7L2.7 5h4.8C10 5 12 7 12 9.5S10 14 7.5 14H1v1h6.5c3 0 5.5-2.5 5.5-5.5C13 6.5 10.5 4 7.5 4zM8 11H1v1h7V11z"/></svg>Postback</a></li>
-                </ul>
-            <hr class="grey-thin">    
-            <div class="manager">
-            <h4 class="uppercase">Your manager</h4>
-            <a href="#" class="blue-paragraph"><img src="images/manager-img.png">Mikhael E.</a>
-            </div>    
+                            <div class="logo"><img src="images/logo.png"></div>
+                            <div id="hamburger"><img src="images/hamburger.png"></div> 
+                            <ul>
+                                <li><a href="index.html" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16"><path d="M8.5 3.6l0.9 2.7L9.6 7h0.7 2.8l-2.3 1.6 -0.6 0.4 0.2 0.7 0.9 2.7 -2.3-1.6 -0.6-0.4 -0.6 0.4 -2.3 1.6 0.9-2.7 0.2-0.7L6.1 8.6 3.9 7h2.8 0.7l0.2-0.7L8.5 3.6M8.5 0.4L6.7 6H0.8l4.8 3.5L3.7 15l4.8-3.5 4.8 3.5 -1.8-5.6L16.2 6h-5.9L8.5 0.4 8.5 0.4z"/></svg>General</a></li>
+                                <li><a href="details.html" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13"><path d="M0 13h14v-1H0V13zM0 10h14V6H0V10zM9 7h4v2H9V7zM1 7h7v2H1V7zM0 0v4h14V0H0zM5 3H1V1h4V3zM13 3H6V1h7V3z"/></svg>Details</a></li>
+                                <li><a href="links.html" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 10"><path d="M7 8H5C3.3 8 2 6.7 2 5s1.3-3 3-3h1V1H5C2.8 1 1 2.8 1 5s1.8 4 4 4h2c2.2 0 4-1.8 4-4h-1C10 6.7 8.7 8 7 8zM13 1h-2C8.8 1 7 2.8 7 5h1c0-1.7 1.3-3 3-3h2c1.7 0 3 1.3 3 3s-1.3 3-3 3h-1v1h1c2.2 0 4-1.8 4-4S15.2 1 13 1z"/></svg>Links</a></li>
+                                <li><a href="banners.html" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13"><path d="M0 6h6V0H0V6zM1 1h4v4H1V1zM8 0v8h6V0H8zM13 7H9V1h4V7zM0 13h6V8H0V13zM1 9h4v3H1V9zM8 13h6v-3H8V13zM9 11h4v1H9V11z"/></svg>Banners</a></li>
+                                <li><a href="personaldata.html" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14"><path d="M4.5 8C6.4 8 8 6.4 8 4.5S6.4 1 4.5 1 1 2.6 1 4.5 2.6 8 4.5 8zM4.5 2C5.9 2 7 3.1 7 4.5S5.9 7 4.5 7 2 5.9 2 4.5 3.1 2 4.5 2zM7.7 7.7L6.9 8.3C8 9.5 8 11.1 8 12.9V13H1v-0.1C1 11.1 1 9.5 2 8.3L1.3 7.7C0 9.1 0 10.9 0 12.9L0 14h9l0-1.1C9 10.9 9 9.1 7.7 7.7z"/></svg>Personal data</a></li>
+                                <li><a href="payout.html" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13"><path d="M10.5 0h-8C1.1 0 0 1.1 0 2.5v8C0 11.9 1.1 13 2.5 13h8c1.4 0 2.5-1.1 2.5-2.5v-8C13 1.1 11.9 0 10.5 0zM1 10.5v-8C1 1.7 1.7 1 2.5 1H6v2H5C3.9 3 3 3.9 3 5s0.9 2 2 2h1v2H4v1h2v2H2.5C1.7 12 1 11.3 1 10.5zM6 4v2H5C4.4 6 4 5.6 4 5s0.4-1 1-1H6zM7 7h1c0.6 0 1 0.4 1 1 0 0.6-0.4 1-1 1H7V7zM12 10.5c0 0.8-0.7 1.5-1.5 1.5H7v-2h1c1.1 0 2-0.9 2-2 0-1.1-0.9-2-2-2H7V4h2V3H7V1h3.5C11.3 1 12 1.7 12 2.5V10.5z"/></svg>Payout</a></li>
+                                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 15"><path d="M7.5 4H2.7l2.1-2.1L4.1 1.1 0.8 4.5l3.4 3.4 0.7-0.7L2.7 5h4.8C10 5 12 7 12 9.5S10 14 7.5 14H1v1h6.5c3 0 5.5-2.5 5.5-5.5C13 6.5 10.5 4 7.5 4zM8 11H1v1h7V11z"/></svg>Postback</a></li>
+                            </ul>
+                        <hr class="grey-thin">    
+                        <div class="manager">
+                        <h4 class="uppercase">Your manager</h4>
+                        <a href="#" class="blue-paragraph" id="notification2"><img src="images/manager-img.png">Mikhael E.</a>
+                        </div>    
             </nav>
             <section class="general-stats container-top">
                 <div class="wrapper--fluid white-bg padding">
@@ -123,7 +171,8 @@
                 </div>
             </section> 
         </div>
-	<script src="js/script.js"></script>	
+    <script src="js/script.js"></script>
+    <script src="js/Tooltip.js"></script>		
     </body>
     
 </html>

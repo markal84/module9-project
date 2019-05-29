@@ -988,6 +988,7 @@ template {
   margin: 0;
   padding: 0;
   list-style: none;
+  cursor: pointer;
 }
 
 .topbar ul li {
@@ -1015,6 +1016,18 @@ template {
 .topbar ul li .arrow {
   width: 12px;
   top: 0;
+}
+
+#tooltip {
+  position: absolute;
+  background: #bababa;
+  color: #ffffff;
+  padding: 8px;
+  z-index: 999;
+}
+
+#tooltip.alt-tooltip {
+  background: #490B22;
 }
 
 .breadcrumb {
@@ -1384,6 +1397,9 @@ th .arrow {
   .popup-message .field-modal-login .chat-icon {
     top: 30px !important;
   }
+  .only-on-mobile {
+    display: inline-block !important;
+  }
   .mobile-no-float {
     float: none !important;
   }
@@ -1628,17 +1644,9 @@ input:focus {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
   overflow: auto;
   padding: 50px;
   display: none;
-}
-
-.overlay .show-modal {
-  display: block;
 }
 
 .modal {
@@ -1648,7 +1656,7 @@ input:focus {
   display: none;
 }
 
-.modal .show-modal {
+.show-modal {
   display: block;
 }
 
@@ -1865,6 +1873,10 @@ ul {
 }
 
 .hide-show {
+  display: none;
+}
+
+.only-on-mobile {
   display: none;
 }
 

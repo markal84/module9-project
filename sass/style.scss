@@ -109,6 +109,9 @@ ul {
 .hide-show {
     display: none;
 }
+.only-on-mobile {
+    display: none;
+}
 
 /* hr classes */
 .grey-thin {
@@ -151,7 +154,7 @@ ul {
     .padding {
         padding: 5px;
     }
-    .chart-container { // containger for chart generated from chart.js
+    .chart-container { // container for chart generated from chart.js
         position: relative;
         width: 768px;
     }
