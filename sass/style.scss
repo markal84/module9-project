@@ -10,6 +10,8 @@
 @import "sections/homepage/homepage_links";
 @import "media_queries";
 @import "sections/form";
+@import "sections/modals";
+
 
 body {
     background-color: $main-bg;
@@ -92,6 +94,22 @@ ul {
     text-align: center;
 }
 
+/* floats */
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+
+/* class to toggle display -> display: none on media queries */
+.show-hide {
+    display: inline-block;
+} 
+.hide-show {
+    display: none;
+}
+
 /* hr classes */
 .grey-thin {
     width: 100%;
@@ -133,4 +151,7 @@ ul {
     .padding {
         padding: 5px;
     }
-    
+    .chart-container { // containger for chart generated from chart.js
+        position: relative;
+        width: 768px;
+    }

@@ -96,8 +96,10 @@
                             </div>
                         <div class="wrapper">
                             <p class="bolder grey-color margin-tb-60">Earning chart</p>
-                            <div class="scroll-wrapper">        
-                            <img src="images/chart.png" class="padding-b-40" alt="">
+                            <div class="scroll-wrapper">
+                                <div class="chart-container padding-b-40">
+                                    <canvas id="myChart" responsive="false"></canvas>
+                                </div>
                             </div>
                         </div>    
                 </div>
@@ -223,7 +225,9 @@
                 </div>
             </section>
         </div>
-	<script src="js/script.js"></script>	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>    
+    <script src="js/script.js"></script>
+    <script src="js/chart.js"></script>	
     </body>
     
 </html>

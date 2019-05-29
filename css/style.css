@@ -1147,7 +1147,7 @@ th .arrow {
   margin: 0 10px;
 }
 
-.btn, .btn-default {
+.btn, .btn-default, .btn-grey {
   border-radius: 3px;
   border: none;
   color: white;
@@ -1180,6 +1180,49 @@ th .arrow {
 
 .btn-submit {
   margin-bottom: 30px;
+}
+
+.btn-grey {
+  background-color: #979797;
+  -webkit-transition: 0.7s ease-in-out;
+  transform: 0.7s ease-in-out;
+}
+
+.btn-grey:hover, .btn-grey:active {
+  background-color: #ffa200;
+}
+
+.btn-rounded {
+  width: 40px;
+  border-radius: 100%;
+}
+
+.btn-rounded svg {
+  transform: rotate(180deg);
+}
+
+.btn-rounded .icons-for-links, .btn-rounded .icons-for-buttons {
+  width: 20px !important;
+  margin: 0 !important;
+}
+
+.btn-chat {
+  position: absolute;
+  left: 78%;
+}
+
+.btn-chat svg {
+  top: 12px !important;
+  left: 10px !important;
+  fill: white !important;
+}
+
+.btn-status {
+  font-size: 14px;
+  color: white;
+  background-color: green;
+  height: auto;
+  padding: 2px;
 }
 
 .general-stats {
@@ -1249,12 +1292,6 @@ th .arrow {
   .show {
     transform: translateX(160px) !important;
   }
-  /*.show-topbar { //class to show topbar on mobile
-        transform: translateX(160px) !important;
-    }*/
-  .dim-bg {
-    background-color: rgba(0, 0, 0, 0.4);
-  }
   .grey-thin, .lightgrey-thin {
     margin: 0 !important;
   }
@@ -1316,6 +1353,51 @@ th .arrow {
   .terms-field {
     margin-top: 70px !important;
     margin-left: 10px;
+  }
+  .form-login .field-modal-login input {
+    width: 87% !important;
+    margin: 10px !important;
+  }
+  .form-login .field-modal-login svg {
+    top: 20px !important;
+    left: 8px !important;
+  }
+  .form-login .field-modal-login .login-icon {
+    top: 26px !important;
+    left: 8px !important;
+  }
+  .popup-message p {
+    max-width: 80% !important;
+  }
+  .popup-message .btn-status {
+    margin-bottom: 10px;
+  }
+  .popup-message .btn-chat {
+    left: 85% !important;
+  }
+  .popup-message .field-modal-login {
+    padding: 20px 0 !important;
+  }
+  .popup-message .field-modal-login input {
+    width: 75% !important;
+  }
+  .popup-message .field-modal-login .chat-icon {
+    top: 30px !important;
+  }
+  .mobile-no-float {
+    float: none !important;
+  }
+  .overlay {
+    padding: 10px !important;
+  }
+  .show-hide {
+    display: none !important;
+  }
+  .hide-show {
+    display: inline-block !important;
+  }
+  .btn-chat {
+    margin-top: 0 !important;
   }
 }
 
@@ -1402,6 +1484,9 @@ th .arrow {
     left: 10px !important;
     margin-top: 0;
   }
+  .btn-login-modal {
+    margin-top: 0;
+  }
   .width-450 {
     width: 100%;
   }
@@ -1484,6 +1569,12 @@ th .arrow {
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1390px) {
+  .field input {
+    width: 55% !important;
+  }
+}
+
 .field {
   margin: 10px 0;
 }
@@ -1522,6 +1613,154 @@ th .arrow {
 .terms-field .terms-input {
   margin-right: 10px;
   width: auto;
+}
+
+input:focus {
+  outline: 1px solid #f58220;
+}
+
+.overlay {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  overflow: auto;
+  padding: 50px;
+  display: none;
+}
+
+.overlay .show-modal {
+  display: block;
+}
+
+.modal {
+  max-width: 768px;
+  margin: auto;
+  background-color: white;
+  display: none;
+}
+
+.modal .show-modal {
+  display: block;
+}
+
+.form-login .field-modal-login {
+  position: relative;
+}
+
+.form-login .field-modal-login input {
+  padding: 10px;
+  margin: 0 10px;
+  width: 42%;
+  transition: 0s;
+  text-indent: 20px;
+}
+
+.form-login .field-modal-login input:hover {
+  border: 1px solid #e3e3e3;
+}
+
+.form-login .field-modal-login input::-webkit-input-placeholder {
+  color: #bababa;
+  margin-left: 5px;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+.form-login .field-modal-login svg {
+  position: absolute;
+  top: 11px;
+  left: 8px;
+  fill: #bababa;
+}
+
+.form-login .field-modal-login .login-icon {
+  top: 15px;
+  left: 335px;
+}
+
+.btn-login-modal {
+  padding: 0 40px;
+}
+
+.popup-quit {
+  width: 360px !important;
+}
+
+.popup-quit .btn, .popup-quit .btn-default, .popup-quit .btn-grey {
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+.popup-message p {
+  max-width: 40%;
+}
+
+.popup-message h3 {
+  margin: 0;
+}
+
+.popup-message .chat-message {
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.popup-message .manager-message {
+  background-color: #e3e3e3;
+  margin-left: 10px;
+}
+
+.popup-message .client-message {
+  background-color: #bababa;
+  color: white;
+  margin-left: 30px;
+}
+
+.popup-message img {
+  margin: 0 15px;
+}
+
+.popup-message .field-modal-login {
+  position: relative;
+}
+
+.popup-message .field-modal-login input {
+  padding: 10px;
+  margin: 0 10px;
+  width: 80%;
+  transition: 0s;
+  text-indent: 20px;
+}
+
+.popup-message .field-modal-login input:hover {
+  border: 1px solid #e3e3e3;
+}
+
+.popup-message .field-modal-login input::-webkit-input-placeholder {
+  color: #bababa;
+  margin-left: 5px;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+.popup-message .field-modal-login svg {
+  position: absolute;
+  top: 11px;
+  left: 8px;
+  fill: #bababa;
+}
+
+.popup-message .field-modal-login .login-icon {
+  top: 15px;
+  left: 335px;
 }
 
 body {
@@ -1611,6 +1850,24 @@ ul {
   text-align: center;
 }
 
+/* floats */
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+/* class to toggle display -> display: none on media queries */
+.show-hide {
+  display: inline-block;
+}
+
+.hide-show {
+  display: none;
+}
+
 /* hr classes */
 .grey-thin, .lightgrey-thin {
   width: 100%;
@@ -1650,5 +1907,10 @@ ul {
 
 .padding {
   padding: 5px;
+}
+
+.chart-container {
+  position: relative;
+  width: 768px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -32,3 +32,8 @@
         width: auto;
     } 
 }
+input {
+    &:focus {
+        outline: 1px solid $orange;
+    }
+}
