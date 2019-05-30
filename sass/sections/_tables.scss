@@ -19,8 +19,13 @@ td {
     border-radius: 3px;
     border-collapse: collapse;
     transition: .5s;
-    &:hover {
+    /*&:hover {
         border: 1px solid $sidebar-bg;
+    }*/
+    td {
+        &:first-child {
+            border-right: 1px solid $light-grey;
+        }
     }
 }
 .layer { // layer for showing / hiding icons on hover on certain tables

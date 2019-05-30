@@ -1,6 +1,8 @@
 # Sass
 sass/.sass-cache
 
+production_only/
+
 # Logs
 logs
 *.log

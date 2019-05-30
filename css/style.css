@@ -1090,10 +1090,13 @@ td {
   border-radius: 3px;
   border-collapse: collapse;
   transition: .5s;
+  /*&:hover {
+        border: 1px solid $sidebar-bg;
+    }*/
 }
 
-.rounded-border:hover {
-  border: 1px solid #191919;
+.rounded-border td:first-child {
+  border-right: 1px solid #e3e3e3;
 }
 
 .layer, .layer-desktop {
