@@ -1,0 +1,16 @@
+.general-stats {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .padding-b-40 {
+        padding-bottom: 40px;
+    }
+    .for-mainpage {
+        text-align: center;
+        padding: 10px;
+        border-bottom: none;
+        img {
+            position: relative;
+            left: 10%;
+        }
+    }
+
+}

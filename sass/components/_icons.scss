@@ -1,0 +1,7 @@
+.icons-for-links {
+    width: 15px;
+    margin: 0 10px;
+}
+.icons-for-buttons {
+    @extend .icons-for-links;
+}

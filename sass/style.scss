@@ -1,0 +1,160 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "layout";
+@import "sections/menus";
+@import "sections/tables";
+@import "components/icons";
+@import "components/buttons";
+@import "sections/homepage/homepage_general_section";
+@import "sections/homepage/homepage_links";
+@import "media_queries";
+@import "sections/form";
+@import "sections/modals";
+
+
+body {
+    background-color: $main-bg;
+    transition: .5s;
+    font-family: $roboto-font;
+    font-weight: $normal;
+    color: $main-font-color;
+    //margin-left: 200px;
+    //margin-top: 62px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+a {
+    text-decoration: none;
+}
+svg {
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+}  
+/* main containers fixed sizes */
+.container-top {
+    margin: 100px 50px 50px 250px;
+}
+.container {
+    margin: 50px 50px 50px 250px;
+}
+
+/* font styles */
+
+    //colors
+    .blue-paragraph {
+        color: $blue;
+        &:hover {
+            color: $links-hover;
+        }
+    }
+    .grey-color {
+        color: $grey-font-color;
+    }
+    .topbar-color {
+        color: $topbar-color;
+    }
+
+    //weight
+    .normal {
+        font-weight: $normal;
+    }
+    .bold {
+        font-weight: $bold;
+    }
+    .bolder {
+        font-weight: $bolder;
+    }
+
+/* margins */
+
+.margin-tb-60 {
+    @include margin-tb(60);
+}
+
+/* text transformations */
+
+.uppercase {
+    text-transform: $uppercase;
+}
+
+/* text styles */
+.align-left {
+    text-align: left;
+}
+.align-right {
+    text-align: right;
+}
+.align-center {
+    text-align: center;
+}
+
+/* floats */
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+
+/* class to toggle display -> display: none on media queries */
+.show-hide {
+    display: inline-block;
+} 
+.hide-show {
+    display: none;
+}
+.only-on-mobile {
+    display: none;
+}
+
+/* hr classes */
+.grey-thin {
+    width: 100%;
+    height: 1px;
+    background-color: $main-font-color;
+    border: none;
+    margin: 30px 0;
+}
+.lightgrey-thin {
+    @extend .grey-thin;
+    background-color: $light-grey;
+}
+
+/* styled headings */
+
+.main-heading {
+    color: $grey-font-color;
+    border-bottom: 2px solid $light-grey;
+    padding: 10px 20px;
+}
+
+/* wrapper for scroll */
+.scroll-wrapper {
+    display: block;
+    width: auto;
+    overflow-x: auto;
+    img {
+        max-width: none;
+    }
+}
+
+
+/* main page */
+
+    /* general section */
+    .white-bg {
+        background-color: $section-bg;
+    }
+    .padding {
+        padding: 5px;
+    }
+    .chart-container { // container for chart generated from chart.js
+        position: relative;
+        width: 768px;
+    }

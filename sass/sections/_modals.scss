@@ -1,0 +1,118 @@
+
+.overlay { //background and container for modals
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    overflow: auto;
+    padding: 50px;
+    display: none; //hidden by default
+}
+.modal {
+    max-width: 768px;
+    margin: auto;
+    background-color: white;
+    display: none; //hidden by default
+}
+.show-modal {
+    display: block;
+}
+.form-login { // login modal
+    .field-modal-login { 
+        position: relative;
+        input {
+            padding: 10px;
+            margin: 0 10px;
+            width: 42%;
+            transition: 0s;
+            text-indent: 20px;
+            &:hover {
+                border: 1px solid $light-grey;
+            }
+            &::-webkit-input-placeholder {
+                color: $grey;
+                margin-left: 5px;
+                font-size: 14px;
+                text-transform: lowercase;
+            }
+         }
+         svg {
+             position: absolute;
+             top: 11px;
+             left: 8px;
+             fill: $grey;
+         }
+         .login-icon {
+             top: 15px;
+             left: 335px;
+         }
+    }
+}
+.btn-login-modal {
+    padding: 0 40px;
+}
+.popup-quit { //exit modal
+    width: 360px !important;
+    .btn {
+        width: 100px;
+        margin-bottom: 30px;
+    }
+}
+.popup-message { //chat window modal
+    //background-color: white;
+    p {
+        max-width: 40%;
+    }
+    h3 {
+        margin: 0;
+    }
+    .chat-message {
+        padding: 15px;
+        border-radius: 5px;
+    }
+    .manager-message {
+        background-color: $light-grey;
+        margin-left: 10px;
+    }
+    .client-message {
+        background-color: $grey;
+        color: white;
+        margin-left: 30px;
+    }
+    img {
+        margin: 0 15px;
+    }
+    .field-modal-login { 
+        position: relative;
+        input {
+            padding: 10px;
+            margin: 0 10px;
+            width: 80%;
+            transition: 0s;
+            text-indent: 20px;
+            &:hover {
+                border: 1px solid $light-grey;
+            }
+            &::-webkit-input-placeholder {
+                color: $grey;
+                margin-left: 5px;
+                font-size: 14px;
+                text-transform: lowercase;
+            }
+         }
+         svg {
+             position: absolute;
+             top: 11px;
+             left: 8px;
+             fill: $grey;
+         }
+         .login-icon {
+             top: 15px;
+             left: 335px;
+         }
+    }
+}

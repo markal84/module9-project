@@ -1,0 +1,22 @@
+.homepage-links {
+    td {
+        padding: 10px;
+    }
+    svg {
+        cursor: pointer;
+        //margin: 0;
+        //padding: 10px;
+            &:hover {
+                fill: $orange;
+                }    
+        }
+    .trash {
+        &:hover {
+            fill: $red !important;  
+        }
+    }      
+}
+
+.padding-20 {
+    padding: 20px;
+}

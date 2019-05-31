@@ -1,0 +1,348 @@
+
+@media screen and (max-width: 767px) {
+    .sidebar {
+        height: 70vh;
+        z-index: 1;
+        left: -160px;
+        transform: translateX(0);
+        transition: transform .5s;
+        #hamburger {
+            visibility: visible;
+            margin-left: 20px;
+        }
+        ul {
+            li {
+                a {
+                    padding: 11px;
+                }
+            }
+        }
+        .manager h4 {
+            margin: 10px 0;
+        }
+        .manager p {
+            margin: 10px 0;
+        }
+    }
+    .active { //active class on sidebar links
+        background-color: #191919;
+        border-left: 5px solid $orange !important;
+    }
+    .show { // class to show hide sidebar on mobile
+        transform: translateX(160px) !important;
+    }
+    .grey-thin {
+        margin: 0 !important;
+    }
+    .topbar {
+        //height: 400px; //temporary
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        top: 500px;
+        left: -160px;
+        background-color: $sidebar-bg;
+        border-bottom: none;
+        z-index: 2;
+        transform: translateX(0);
+        transition: transform .5s;
+        ul {
+            li {
+                //display: block;
+                border-left: none;
+                line-height: 42px;
+                &:nth-child(1) {
+                    @include font-size(16px);
+                }
+                svg {
+                    margin: 0 5px 0 20px !important;
+                }
+            }
+        }
+    }
+    .container-top {
+        margin: 0 0 0 40px !important;
+    }
+    .container {
+        margin: 5px 0 0 40px !important;
+    }
+    .margin-tb-60 {
+        margin-top: 30px !important;
+        margin-bottom: 30px !important;
+    }
+    .layer { // always wisible on mobile - two icons links section
+        opacity: 1;
+    }
+    /*.main-heading { // remove margin on mobile
+        margin: 0;
+    } */
+    .btn-default { //button
+        @include margin-tb(10);
+    }
+    .refresh-button { //button
+        left: 10px !important;
+        margin-top: 0;
+    }
+    .width-450 { //table
+        width: 455px;
+    } 
+    .field { //submit form
+        label {
+            margin-left: 10px !important;
+        }
+        input {
+            width: 87% !important;
+        }
+    }
+    .terms-field { //submit form
+        margin-top: 70px !important;
+        margin-left: 10px;
+    }
+    .form-login { //login modal
+        .field-modal-login {
+            input {
+                width: 87% !important;
+                margin: 10px !important;
+            }
+            svg {
+                top: 20px !important;
+                left: 8px !important;
+            }
+            .login-icon {
+                top: 26px !important;
+                left: 8px !important;
+            }
+        }
+    }
+    .popup-message { //chat modal
+        p {
+            max-width: 80% !important;
+        }
+        .btn-status {
+            margin-bottom: 10px;
+        }
+        .btn-chat {
+            left: 85% !important;
+        }
+        .field-modal-login {
+            padding: 20px 0 !important;
+            input {
+                width: 75% !important;
+            }
+            .chat-icon {
+                top: 30px !important;
+            }
+        }
+    }
+    .only-on-mobile {
+        display: inline-block !important;
+    }
+    .mobile-no-float { //only on small mobile screens
+        float: none !important;
+    }
+    .overlay {
+        padding: 10px !important;
+    }
+    .show-hide {
+        display: none !important;
+    }
+    .hide-show {
+        display: inline-block !important;
+    }
+    .btn-chat {
+        margin-top: 0 !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .sidebar {
+        //height: 550px;
+        height: 70vh;
+        z-index: 1;
+        left: -160px;
+        transform: translateX(0);
+        transition: transform .5s;
+        #hamburger {
+            visibility: visible;
+            margin-left: 20px;
+        }
+        ul {
+            li {
+                a {
+                    padding: 11px;
+                }
+            }
+        }
+        .manager h4 {
+            margin: 10px 0;
+        }
+        .manager p {
+            margin: 10px 0;
+        }
+    }
+    .active { //active class on sidebar links
+        background-color: #191919;
+        border-left: 5px solid $orange !important;
+    }
+    .show { // class to show hide sidebar on mobile
+        transform: translateX(160px) !important;
+    }
+    /*.show-topbar { //class to show topbar on mobile
+        transform: translateX(160px) !important;
+    }*/
+    .dim-bg { // class to toogle bg dimming on clicking hamburger 
+        background-color: rgba(0,0,0,0.4);      
+    } 
+    .grey-thin {
+        margin: 0 !important;
+    }
+    .topbar {
+        //height: 400px; //temporary
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        top: 500px;
+        left: -160px;
+        background-color: $sidebar-bg;
+        border-bottom: none;
+        z-index: 2;
+        transform: translateX(0);
+        transition: transform .5s;
+        ul {
+            li {
+                //display: block;
+                border-left: none;
+                line-height: 42px;
+                &:nth-child(1) {
+                    @include font-size(16px);
+                }
+                svg {
+                    margin: 0 5px 0 20px !important;
+                }
+            }
+        }
+    }
+    .container-top {
+        margin: 0 0 0 40px !important;
+    }
+    .container {
+        margin: 5px 0 0 40px !important;
+    }
+    .margin-tb-60 {
+        margin-top: 30px !important;
+        margin-bottom: 30px !important;
+    }
+    .layer { // always wisible on mobile - two icons links section
+        opacity: 1;
+    }
+    /*.main-heading { // remove margin on mobile
+        margin: 0;
+    } */
+    .btn-default { //button
+        @include margin-tb(10);
+    }
+    .refresh-button { //button
+        left: 10px !important;
+        margin-top: 0;
+    }
+    .btn-login-modal {
+        margin-top: 0;
+    }
+    .width-450 { //table
+        width: 100%;
+    } 
+    .field { //submit form
+        label {
+            margin-left: 10px !important;
+        }
+        input {
+            width: 87% !important;
+        }
+    }
+    .terms-field { //submit form
+        margin-top: 70px !important;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 991px) and (orientation: landscape) {
+    .container-top {
+        margin: 70px 5px 40px 170px !important;
+    }
+    .container {
+        margin: 70px 5px 40px 170px !important;
+    }
+    .width-450 {
+        width: 100%;
+    } 
+
+    .sidebar {
+        left: 0;
+        width: 162px;
+        height: 100vh;
+        #hamburger {
+            visibility: hidden;
+        }
+        ul {
+            li {
+                a { 
+                    padding: 4px;
+                }
+            }
+        }
+    }
+    .topbar {
+        //position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: white;
+        width: 100%;
+        height: 55px;
+        overflow: hidden;
+        border-bottom: $thin-grey;
+        ul {
+            float: right;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                display: inline-block;
+                line-height: 60px;
+                border-left: 1px solid $light-grey;
+    
+                &:nth-child(1) {
+                    @include font-size(20px);
+                }
+                &:nth-child(3) {
+                    padding-right: 5px;
+                }
+        
+                svg {
+                    fill: #9c9c9c;
+                    width: 20px;
+                    margin: 0 20px;
+                    position: relative;
+                    top: 2px;
+                }
+                .arrow {
+                    width: 12px;
+                    top: 0;
+                } 
+            }
+        }
+    
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .th-container {
+        width: auto;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1390px) { //rwd for personaldata.html conttact form
+    .field {
+        input {
+            width: 55% !important;
+        }
+    }
+} 
