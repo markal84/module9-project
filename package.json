@@ -15,7 +15,7 @@
     "build:sass": "node-sass --output-style compressed -x -o css sass",
     "build:autoprefixer": "autoprefixer-cli css/style.css",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
-    
+    "build:tinypng": "tinypng images/ -r -k A2GVgsJYb95I2tm2qFJQ8LEe0NaU03mO", 
     "watch": "npm-run-all build -p watch:*",
     "watch:browser-sync": "browser-sync start --server --files css/*.css *.html",
     "sass": "node-sass --output-style expanded --source-map true -o css sass",
